@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Half Rectangle -->
+<item>
+    <shape
+        android:shape="rectangle">
+        <solid android:color="@color/altra_light_red"/> <!-- Rectangle color -->
+    </shape>
+</item>
+
+<!-- Triangle Cut (Diagonal cut from the top-right) -->
+<item android:right="0dp" android:left="0dp">
+    <rotate
+        android:fromDegrees="45">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Triangle cut color (transparent if desired) -->
+            <size android:width="100dp" android:height="100dp"/>
+        </shape>
+    </rotate>
+</item>
+</layer-list>

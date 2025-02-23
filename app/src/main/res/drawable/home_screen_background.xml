@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White square background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <size android:height="40dp" android:width="40dp"/>
+        </shape>
+    </item>
+
+    <!-- Green vertical line with margins -->
+    <item android:right="18dp" android:left="18dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_red"/>
+            <size android:height="40dp" android:width="4dp"/>
+        </shape>
+    </item>
+
+    <!-- Green circle in the center with a white stroke -->
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:color="@color/light_red"/>
+            <size android:height="15dp" android:width="15dp"/>
+            <stroke android:width="2dp" android:color="@color/white"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".ui.fragments.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="@string/add_record"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18_sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background"
+        android:padding="@dimen/_20"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_date"
+            style="@style/CustomOutlineBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40"
+            android:hint="@string/empty_date"
+            app:boxStrokeColor="#000000"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:hintTextColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingTop="0dp"
+                android:textSize="@dimen/text_size_14_sp"
+                android:paddingBottom="0dp"
+                android:textColor="@color/black"
+                app:hintTextColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spin_month"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40"
+            android:layout_marginTop="@dimen/_10"
+            android:background="@drawable/spinner_shape"
+            android:dropDownHorizontalOffset="@dimen/size_50_dp"
+            android:dropDownVerticalOffset="@dimen/size_5_dp"
+            android:entries="@array/month"
+            android:overlapAnchor="false"
+            android:paddingStart="@dimen/_2"
+            android:paddingEnd="@dimen/_2"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@+id/til_date" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_message"
+            style="@style/CustomOutlineBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10"
+            android:hint="@string/empty_item"
+            app:layout_constraintTop_toBottomOf="@+id/spin_month">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minHeight="150dp"
+                android:minLines="10"
+                android:scrollbars="vertical"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddstory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10"
+            android:layout_marginRight="@dimen/_30"
+            android:src="@android:drawable/ic_input_add"
+            app:fabSize="normal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_message" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/size_150_dp"
+            android:layout_height="@dimen/size_150_dp"
+            android:layout_marginTop="@dimen/size_100_dp"
+            android:background="@drawable/ic_circle_shape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_message">
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <ProgressBar
+            android:id="@+id/record_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

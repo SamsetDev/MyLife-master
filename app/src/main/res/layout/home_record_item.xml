@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/size_8_dp"
+    app:cardElevation="@dimen/size_2_dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_itemview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/_2"
+        android:paddingBottom="@dimen/_5"
+        android:paddingRight="@dimen/_8"
+        android:paddingLeft="@dimen/_8">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5"
+            android:fontFamily="@font/avenir_regular"
+            android:text="Message name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15_sp"
+            android:typeface="serif"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/05/2022"
+            android:textSize="@dimen/text_size_12_sp"
+            android:typeface="serif"
+
+            android:textColor="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="@dimen/_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
